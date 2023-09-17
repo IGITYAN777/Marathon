@@ -1,1 +1,491 @@
+///////////////// 1
+
+#include <stdio.h>
+
+int main(){
+
+  int num = 0;
+  printf("Enter the number: ");
+  scanf("%d", &num);
+  printf("%d", num);
+
+  return 0;
+
+}
+
+///////////////// 2
+
+
+#include <stdio.h>
+
+int main(){
+
+  double num = 0;
+  printf("Enter the number: ");
+  scanf("%lf", &num);
+  printf("%lf", num);
+
+  return 0;
+
+}
+
+///////////////// 3
+
+
+#include <stdio.h>
+
+int main(){
+
+  char name = 0;
+  printf("Enter the char: ");
+  scanf(" %c", &name);
+  printf("%c", name);
+
+  return 0;
+
+}
+
+///////////////// 4
+
+#include <stdio.h>
+
+int main(){
+
+  int num1 = 0;
+  int num2 = 0;
+  int total = 0;
+
+  printf("Enter the number one: ");
+  scanf("%d", &num1);
+  printf("Enter the number two: ");
+  scanf("%d", &num2);
+
+  total = num1 + num2;
+
+  printf("%d", total);
+
+  return 0;
+
+}
+
+
+///////////////// 5
+
+#include <stdio.h>
+
+int main(){
+
+  int age = 0;
+
+  printf("Enter your age: ");
+  scanf("%d", &age);
+
+  printf("You are %d years old ", age);
+
+  return 0;
+
+}
+
+///////////////// 6
+
+#include <stdio.h>
+
+int main(){
+
+  int x = 0;
+  int num = 0;
+
+  printf("Enter the number x: ");
+  scanf("%d", &x);
+
+  num = (4*x + 21*x*x - 12);
+
+  printf("%d", num);
+
+  return 0;
+
+}
+
+///////////////// 7
+
+#include <stdio.h>
+
+int main(){
+
+  int x = 0;
+  int num = 0;
+
+  printf("Enter the number x: ");
+  scanf("%d", &x);
+
+  num = (x/(5 + 2) + 30*x - 51);
+
+  printf("%d", num);
+
+  return 0;
+
+}
+
+///////////////// 8
+
+#include <stdio.h>
+
+int main(){
+
+  int x = 0;
+  int y = 0;
+  int num = 0;
+
+  printf("Enter the number x: ");
+  scanf("%d", &x);
+  printf("Enter the number y: ");
+  scanf("%d", &y);
+
+  num = (x*y + 21*x/y - 200);
+
+  printf("%d", num);
+
+  return 0;
+
+}
+
+
+///////////////// 9
+
+#include <stdio.h>
+
+int main(){
+
+  char sym = 0;
+
+  printf("Enter the capital letter: ");
+  scanf(" %c", &sym);
+
+  printf("%c", (sym + 32));
+
+  return 0;
+
+}
+
+///////////////// 10
+
+
+#include <stdio.h>
+
+int main(){
+
+  char sym = 0;
+
+  printf("Enter the symbol: ");
+  scanf("%c", &sym);
+
+  if('0' <= sym && sym <= '9'){
+    printf("True");
+  }else{
+    printf("False");
+  }
+
+
+  return 0;
+
+}
+
+
+///////////////// 11
+
+
+#include <stdio.h>
+
+int main(){
+
+  const int length = 100;
+  char sym[length];
+  int vowels = 0;
+  int consonants = 0;
+
+  printf("Enter the text: ");
+  scanf("%c", &sym);
+
+  for(int i = 0; i < length; i++){
+    if('a' <= sym[i] && sym[i] <= 'z'){
+      if(sym[i] == 'a' || sym[i] == 'e' ||sym[i] == 'i' ||sym[i] == 'o' || sym[i] == 'u'){
+        vowels++;
+      }else{
+        consonants++;
+      }
+    }else if('A' <= sym[i] && sym[i] <= 'Z'){
+      if(sym[i] == 'A' || sym[i] == 'E' ||sym[i] == 'I' ||sym[i] == 'O' || sym[i] == 'U'){
+        vowels++;
+      }else{
+        consonants++;
+      }
+    }
+  }
+
+  printf("%d", vowels);
+  printf(", %d", consonants);
+
+
+  return 0;
+
+}
+
+
+
+///////////////// 12
+
+
+
+
+
+///////////////// 13
+
+
+#include <stdio.h>
+
+int main(){
+
+  double celsius = 0;
+  double faren = 0;
+
+  printf("Enter the celsius: ");
+  scanf("%lf", &celsius);
+
+  faren = (celsius * 9/5 + 32);
+
+  printf("%lf", faren);
+
+
+  return 0;
+
+}
+
+
+///////////////// 14
+
+
+#include <stdio.h>
+
+int main(){
+
+  int age = 0;
+
+  printf("Enter the age: ");
+  scanf("%d", &age);
+
+  if(age >= 0){
+    if(age < 18){
+      printf("Duq anchapahas eq");
+    }else if(age <= 65){
+      printf("Duq chapahas eq");
+    }else{
+      printf("Du tarec qaxaqaci es");
+    }
+  }else{
+    printf("Enter rigth age");
+  }
+
+
+
+  return 0;
+
+}
+
+
+
+///////////////// 15
+
+
+#include <stdio.h>
+
+int main(){
+
+  int grade = 0;
+
+  printf("Enter the grade: ");
+  scanf("%d", &grade);
+
+  if(90 <= grade && grade <= 100){
+    printf("A");
+  }else if(80 <= grade && grade <= 89){
+    printf("B");
+  }else if(70 <= grade && grade <= 79){
+    printf("C");
+  }else if(60 <= grade && grade <= 69){
+    printf("D");
+  }else if(grade < 60){
+    printf("E");
+  }
+
+
+
+
+  return 0;
+
+}
+
+
+///////////////// 16
+
+
+#include <stdio.h>
+
+int main(){
+
+  int tall = 0;
+
+  printf("Enter how tall are you: ");
+  scanf("%d", &tall);
+
+  if(150 <= tall){
+    printf("Duq hamapatasxanum eq");
+  }else{
+    printf("Duq cheq hamapatasxanum");
+  }
+
+
+
+
+  return 0;
+
+}
+
+
+///////////////// 32
+
+
+#include <stdio.h>
+
+int main(){
+
+  int num = 0;
+  int a = 0;
+
+  scanf("%d", &num);
+
+  if(num > 12){
+    while(num > 0){
+      a = num % 10;
+      printf("%d", a);
+      num = num/10;
+    }
+  }
+
+  return 0;
+}
+
+
+
+///////////////// 33
+
+
+
+#include <stdio.h>
+
+int main(){
+
+  int num = 0;
+  int a = 0;
+  int sum = 0;
+
+  scanf("%d", &num);
+
+    while(num > 0){
+      a = num % 10;
+      sum += a;
+      num = num/10;
+    }
+
+    printf("%d", sum);
+
+  return 0;
+}
+
+
+///////////////// 34
+
+
+#include <stdio.h>
+
+int main(){
+
+  int a = 1;
+  int b = 1;
+  int num = 0;
+  int sum = 0;
+
+  scanf("%d", &num);
+
+  printf("%d \n %d", a, b);
+
+  do{
+    sum = a + b;
+    a = b;
+    b = sum;
+    printf("\n %d", sum);
+    num--;
+  }while(num > 3);
+
+
+
+  return 0;
+}
+
+
+///////////////// 36
+
+
+
+#include <stdio.h>
+
+int main() {
+    
+    int x = 0;
+    int y = 0;
+    scanf("%d", &x);
+    scanf("%d", &y);
+    
+    for(int i = x; i < y; i++){
+        if(i % 2 == 0){
+            printf("\n %d", i);
+        }
+    }
+
+    return 0;
+}
+
+
+///////////////// 37
+
+
+#include <stdio.h>
+
+int main() {
+    
+    int x = 0;
+    scanf("%d", &x);
+    
+    for(int i = 1; i < x + 1; i++){
+        printf("\n");
+        for(int j = 1; j <= i; j++){
+            printf("%d", i);
+        }
+    }
+
+    return 0;
+}
+
+
+
+
+
+///////////////// 38
+
+
+
+
+
+
+
+///////////////// 34
 
